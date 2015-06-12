@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--DAL对象映射-->
+<configuration>
+
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration" />
+  </configSections>
+
+  <unity>
+    <typeAliases>
+      <typeAlias alias="singleton" type="Microsoft.Practices.Unity.ContainerControlledLifetimeManager, Microsoft.Practices.Unity" />
+
+      <typeAlias alias="IComCity" type="EyouSoft.IDAL.ComStructure.IComCity,EyouSoft.IDAL" />
+      <typeAlias alias="DComCity" type="EyouSoft.DAL.ComStructure.DComCity,EyouSoft.DAL" />
+      <typeAlias alias="IGeography" type="EyouSoft.IDAL.SysStructure.IGeography, EyouSoft.IDAL" />
+      <typeAlias alias="DGeography" type="EyouSoft.DAL.SysStructure.DGeography, EyouSoft.DAL" />
+      
+      <!--游轮-->
+      <typeAlias alias="YL_IJiChuXinXi" type="EyouSoft.IDAL.YlStructure.IJiChuXinXi, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DJiChuXinXi" type="EyouSoft.DAL.YlStructure.DJiChuXinXi, EyouSoft.DAL" />
+      <typeAlias alias="YL_IHangQi" type="EyouSoft.IDAL.YlStructure.IHangQi, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DHangQi" type="EyouSoft.DAL.YlStructure.DHangQi, EyouSoft.DAL" />
+      <typeAlias alias="YL_IWz" type="EyouSoft.IDAL.YlStructure.IWz, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DWz" type="EyouSoft.DAL.YlStructure.DWz, EyouSoft.DAL" />
+      <typeAlias alias="YL_IHuiYuan" type="EyouSoft.IDAL.YlStructure.IHuiYuan, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DHuiYuan" type="EyouSoft.DAL.YlStructure.DHuiYuan, EyouSoft.DAL" />
+      <typeAlias alias="YL_IDuiHuan" type="EyouSoft.IDAL.YlStructure.IDuiHuan, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DDuiHuan" type="EyouSoft.DAL.YlStructure.DDuiHuan, EyouSoft.DAL" />
+      <typeAlias alias="YL_IHangQiDingDan" type="EyouSoft.IDAL.YlStructure.IHangQiDingDan, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DHangQiDingDan" type="EyouSoft.DAL.YlStructure.DHangQiDingDan, EyouSoft.DAL" />
+      <typeAlias alias="YL_ILiPinKa" type="EyouSoft.IDAL.YlStructure.ILiPinKa, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DLiPinKa" type="EyouSoft.DAL.YlStructure.DLiPinKa, EyouSoft.DAL" />
+      <typeAlias alias="YL_IZaiXianZhiFu" type="EyouSoft.IDAL.YlStructure.IZaiXianZhiFu, EyouSoft.IDAL" />
+      <typeAlias alias="YL_DZaiXianZhiFu" type="EyouSoft.DAL.YlStructure.DZaiXianZhiFu, EyouSoft.DAL" />
+      
+    </typeAliases>
+    <containers>
+      <container>
+        <types>
+          <type type="IGeography" mapTo="DGeography" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="IComCity" mapTo="DComCity" name="">
+            <lifetime type="singleton" />
+          </type>
+          
+          <!--游轮-->
+          <type type="YL_IJiChuXinXi" mapTo="YL_DJiChuXinXi" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_IHangQi" mapTo="YL_DHangQi" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_IWz" mapTo="YL_DWz" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_IHuiYuan" mapTo="YL_DHuiYuan" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_IDuiHuan" mapTo="YL_DDuiHuan" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_IHangQiDingDan" mapTo="YL_DHangQiDingDan" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_ILiPinKa" mapTo="YL_DLiPinKa" name="">
+            <lifetime type="singleton" />
+          </type>
+          <type type="YL_IZaiXianZhiFu" mapTo="YL_DZaiXianZhiFu" name="">
+            <lifetime type="singleton" />
+          </type>
+          
+        </types>
+      </container>
+    </containers>
+  </unity>
+</configuration>

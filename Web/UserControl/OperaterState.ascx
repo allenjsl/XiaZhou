@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OperaterState.ascx.cs" Inherits="Web.UserControl.OperaterState" %>
+<asp:DropDownList ID="ddlstate" runat="server" AutoPostBack="true"></asp:DropDownList>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D649A687-0AE4-4CFD-8F01-455E7A801D12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.Document</RootNamespace>
+    <AssemblyName>EyouSoft.Document</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>http://localhost/EyouSoft.Document/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="PD\EV6.pdm" />
+    <None Include="PD\YL.pdm" />
+    <None Include="PD\基础SQL\BackgroundServices.sql" />
+    <None Include="PD\基础SQL\Elmah.sql" />
+    <None Include="PD\基础SQL\webmaster.sql" />
+    <None Include="PD\基础SQL\全国省份城市地区数据.sql" />
+    <None Include="PD\基础SQL\一级栏目.sql" />
+    <None Include="PD\基础SQL\二级栏目.sql" />
+    <None Include="PD\基础SQL\县区.sql" />
+    <None Include="PD\基础SQL\国家.sql" />
+    <None Include="PD\基础SQL\城市.sql" />
+    <None Include="PD\基础SQL\明细权限.sql" />
+    <None Include="PD\基础SQL\省份.sql" />
+    <None Include="PD\基础SQL\%28已过时%29默认一二级栏目及权限数据.sql" />
+    <None Include="Yl\HBXZ-ERP-YL.doc" />
+    <None Include="Yl\湖北峡州国旅游轮系统开发合同附件.20120220.docx" />
+    <None Include="散拼流程图.vsd" />
+    <None Include="数据库日志\数据清理.sql" />
+    <None Include="数据库日志\日志.sql" />
+    <None Include="策划文档\%2820110915%29峡州.doc" />
+    <None Include="策划文档\%2820110928%29峡洲.doc" />
+    <None Include="策划文档\%2820111009%29易游软件界面意见稿.doc" />
+    <None Include="策划文档\%2820111024%29软件修改意见提交.doc" />
+    <None Include="策划文档\%28201112080001%29需求变更确认函.doc" />
+    <None Include="策划文档\2012-01-12新版策划文档\出境团队.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\单项业务.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\同业分销.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\地接团队.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\导游中心.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\系统设置.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\组团团队.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\行政中心.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\计调中心.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\财务管理.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\资源管理.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\资源预控.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\通用说明.mmap" />
+    <None Include="策划文档\2012-01-12新版策划文档\销售中心.mmap" />
+    <None Include="策划文档\xz201212210001%28时间评估%29.doc" />
+    <None Include="策划文档\xz201212210001.doc" />
+    <None Include="策划文档\原型确认会议记录.doc" />
+    <None Include="策划文档\峡州-华天国旅ERP.mmap" />
+    <None Include="策划文档\%2820111101%29差异对照表.doc" />
+    <None Include="策划文档\界面问题.doc" />
+    <None Include="策划文档\短线开发文档.mmap" />
+    <None Include="策划文档\短线讨论结果.doc" />
+    <None Include="组团流程图.vsd" />
+    <None Include="计调中心数据库设计.doc" />
+    <None Include="金蝶\复件 金蝶设计说明.doc" />
+    <None Include="金蝶\金蝶导入凭证示例.xls" />
+    <None Include="金蝶\导出模板.xls" />
+    <None Include="金蝶\金蝶导出必录字段.xls" />
+    <None Include="金蝶\金蝶科目组成确认.doc" />
+    <None Include="金蝶\金蝶设计说明.doc" />
+    <None Include="Web目录文档.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Adpost.Common.License.dll" />
+    <Content Include="lib\Adpost.Common.Office.dll" />
+    <Content Include="lib\AliPayCode.dll" />
+    <Content Include="lib\AntiXSSLibrary.dll" />
+    <Content Include="lib\Elmah.dll" />
+    <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="lib\Jayrock.Json.dll" />
+    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\Memcached.ClientLibrary.dll" />
+    <Content Include="lib\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="lib\Microsoft.Office.Interop.Word.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml" />
+    <Content Include="lib\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="lib\Newtonsoft.Json.dll" />
+    <Content Include="lib\Newtonsoft.Json.xml" />
+    <Content Include="lib\PayAPI.dll" />
+    <Content Include="lib\PayAPI.XML" />
+    <Content Include="lib\UPOPSDK.dll" />
+    <Content Include="PD\EV6.pdb" />
+    <Content Include="PD\YL.pdb" />
+    <Content Include="PD\底层变更记录\单项业务.txt" />
+    <Content Include="PD\底层变更记录\合同管理.txt" />
+    <Content Include="PD\底层变更记录\导游中心.txt" />
+    <Content Include="PD\底层变更记录\系统设置.txt" />
+    <Content Include="PD\底层变更记录\组团，地接，出镜.txt" />
+    <Content Include="PD\底层变更记录\行政中心.txt" />
+    <Content Include="PD\底层变更记录\计调安排.txt" />
+    <Content Include="PD\底层变更记录\订单相关.txt" />
+    <Content Include="PD\底层变更记录\财务管理.txt" />
+    <Content Include="Yl\开发说明.txt" />
+    <Content Include="其它\Q.txt" />
+    <Content Include="其它\QA.txt" />
+    <Content Include="privs.xml" />
+    <Content Include="其它\打印单据Q.txt" />
+    <Content Include="子系统管理.txt" />
+    <Content Include="应用开发说明.txt" />
+    <Content Include="底层开发说明.txt" />
+    <Content Include="打印单据\包车客运计划单.jpg" />
+    <Content Include="打印单据\地接通知单.jpg" />
+    <Content Include="打印单据\报价模板.jpg" />
+    <Content Include="打印单据\景点通知单.jpg" />
+    <Content Include="打印单据\汽车订票单.jpg" />
+    <Content Include="打印单据\涉外游轮通知单.jpg" />
+    <Content Include="打印单据\组团团队（带框）.jpg" />
+    <Content Include="打印单据\组团团队（无框）.jpg" />
+    <Content Include="打印单据\订房通知单.jpg" />
+    <Content Include="打印单据\订车通知单.jpg" />
+    <Content Include="打印单据\酒店订房单.jpg" />
+    <Content Include="表前缀及常用字段命名说明.txt" />
+    <Content Include="金蝶\金蝶设计说明.txt" />
+  </ItemGroup>
+</Project>

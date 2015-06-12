@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>多选团队状态</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-1.4.4.js" type="text/javascript"></script>
+    <script src="/js/utilsuri.js" type="text/javascript"></script>
+    
+    <style type="text/css">
+        li{float:left; width:25%; height:30px; line-height:30px;}
+    </style>
+    
+    <script type="text/javascript">
+        var iPage = {
+            //获取父窗口控件对象
+            getP: function() {
+                var _params = utilsUri.getUrlParams([]);
+                var _clientid = _params["ClientID"];
+                return parent.window[_clientid];
+            },
+            close: function() {
+                var _params = utilsUri.getUrlParams([]);
+                parent.Boxy.getIframeDialog(_params["iframeId"]).hide();
+            },
+            init: function() {
+                var _values = this.getP().getValue().value;
+                if (_values.length == 0) return;
+
+                var _arr = _values.split(",");
+
+                for (var i = 0; i < _arr.length; i++) {
+                    $("#chk_" + _arr[i]).attr("checked", "checked");
+                }
+            },
+            xuanZe: function() {
+                var _data = { value: [], text: [] };
+                $("input[type='checkbox']:checked").each(function() {
+                    var _$objValue = $(this);
+                    var _$objText = _$objValue.next("label");
+                    _data.value.push(_$objValue.val());
+                    _data.text.push(_$objText.text());
+                });
+
+                this.getP().setValue(_data);
+                this.close();
+            },
+            quanXuan: function() {
+                $("input[type='checkbox']").attr("checked", "checked");
+            },
+            fanXuan: function() {
+                $("input[type='checkbox']").each(function() {
+                    if (this.checked) $(this).removeAttr("checked");
+                    else $(this).attr("checked", "checked");
+                });
+            }
+        };
+
+        $(document).ready(function() {
+            iPage.init();
+            $("#i_a_xuanze").click(function() { iPage.xuanZe(); });
+            $("#i_a_quanxuan").click(function() { iPage.quanXuan(); });
+            $("#i_a_fanxuan").click(function() { iPage.fanXuan(); });
+        });
+    </script>
+</head>
+<body style="background: #e9f4f9;">
+    <ul style="width: 480px; margin: 0px auto; margin-top:10px;">
+        <li>
+            <input type="checkbox" value="0" id="chk_0" />&nbsp;<label for="chk_0">销售未派计划</label></li>
+        <li>
+            <input type="checkbox" value="1" id="chk_1" />&nbsp;<label for="chk_1">计调未接收</label></li>
+        <li>
+            <input type="checkbox" value="2" id="chk_2" />&nbsp;<label for="chk_2">计调配置</label></li>
+        <li>
+            <input type="checkbox" value="3" id="chk_3" />&nbsp;<label for="chk_3">计调配置完毕</label></li>
+        <li>
+            <input type="checkbox" value="4" id="chk_4" />&nbsp;<label for="chk_4">导游带团</label></li>
+        <li>
+            <input type="checkbox" value="5" id="chk_5" />&nbsp;<label for="chk_5">导游报帐</label></li>
+        <li>
+            <input type="checkbox" value="6" id="chk_6" />&nbsp;<label for="chk_6">销售未结算</label></li>
+        <li>
+            <input type="checkbox" value="7" id="chk_7" />&nbsp;<label for="chk_7">销售待审</label></li>
+        <li>
+            <input type="checkbox" value="8" id="chk_8" />&nbsp;<label for="chk_8">计调待审</label></li>
+        <li>
+            <input type="checkbox" value="9" id="chk_9" />&nbsp;<label for="chk_9">待终审</label></li>
+        <li>
+            <input type="checkbox" value="10" id="chk_10" />&nbsp;<label for="chk_10">财务核算</label></li>
+        <li>
+            <input type="checkbox" value="11" id="chk_11" />&nbsp;<label for="chk_11">封团</label></li>
+    </ul>
+    <div style="width:480px; margin:0px auto; margin-top:10px; line-height:30px;">
+        <a href="javascript:void(0)" id="i_a_quanxuan">全选</a>&nbsp;&nbsp;
+        <a href="javascript:void(0)" id="i_a_fanxuan">反选</a>
+    </div>
+    <div class="alertbox-btn">
+        <a id="i_a_xuanze" href="javascript:void(0);"><s class="xuanzhe"></s>选 择</a>
+    </div>
+</body>
+</html>

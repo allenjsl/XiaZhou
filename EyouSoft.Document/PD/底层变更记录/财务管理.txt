@@ -1,0 +1,47 @@
+1、备用金申请表 
+	新增：预领签单数（PreSignNum）、实领签单数（RelSignNum）、操作员编号（OperatorId）
+	      、操作员名（Operator）、操作时间（IssueTime）、操作员部门编号（DeptId）、计调编号（PlanId）
+	      、是否删除（IsDeleted）、付款人编号（LenderId）、付款人名（Lender）、是否支付（IsLend）
+	删除：BorrowerType
+
+2、新增发票管理表（tbl_FinBill）
+
+3、利润分配（tbl_FinProfitDistribute）
+	新增：订单编号（OrderId ）、分配类型（DistributeType）tinyint->nvarchar(50)
+
+4、财务管理_杂费收入（tbl_FinOtherInFee）
+	新增：借付款人编号（DealerId）char(36)、借付款人（Dealer）nvarchar(50)、审核人部门编号AuditDeptId
+	      、审核人编号AuditId、审核人Audit、审批意见AuditRemark、团号TourCode
+	修改：单位名称 Company->Crm、是否审核IsAudit-》Status
+	删除：是否开票（IsBill）、开票金额（BillAmount）、发票收据号（BillNo）、收支类型FeeType、收支状态FeeStatus
+
+5、财务管理_杂费支出（tbl_FinOtherOutFee）
+	新增：借付款人编号（DealerId）char(36)、借付款人（Dealer）nvarchar(50)、审核人编号AuditId、审核人Audit
+		、审批意见AuditRemark、出纳部门编号编号AccountantDeptId、出纳编号AccountantId、出纳Accountant
+		、支付日期PayTime、销售员编号SellerId、销售员Seller
+	修改：单位名称 Company->Crm、收支状态FeeStatus->状态Status
+	删除：是否开票（IsBill）、开票金额（BillAmount）、发票收据号（BillNo）、是否审核IsAudit
+
+6、财务管理_出帐登记（tbl_FinRegister）
+	新增：操作人部门编号（DeptId）int、最晚付款日期（Deadline）datetime、操作员（Operator）
+		、付款人部门编号DealerDeptId、状态Status（销售待确认、财务待审批、账务待支付、账务已支付）
+		、是否预付申请（IsPrepaid）、出纳编号AccountantId、出纳Accountant、支付日期PayTime
+	修改：单位名称 Company->Crm
+	删除：是否开票（IsBill）、开票金额（BillAmount）、发票收据号（BillNo）、审核状态IsChecked、是否付款IsPayment
+
+7、删除 财务管理_批量销帐登记表（tbl_FinlBatchWriteOff）
+
+8、财务管理_垫付申请表（tbl_FinDisburseApply）
+	新增：系统公司编号（CompanyId）char(36)、申请时间（ApplyTime）datetime、备注（Remark）nvarchar(500)
+	      操作员部门编号（DeptId）、操作员名（Operator）
+	删除：现收款（Collection）、应收款（Receivable）
+
+9、财务管理_固定资产（tbl_FinAssets） 
+	新增：操作者Operator、操作者部门编号DeptId、管理责任者部门编号AdminDeptId
+	      、管理责任编号AdminId、管理责任者Admin
+
+10、删除财务统计_日记账（tbl_FinDayRegister）
+
+11、财务管理_借款管理（tbl_FinDebit）
+	删除：审批状态IsApprove、是否支付IsLend
+	新增：状态Status（待审待付已付）

@@ -1,0 +1,56 @@
+1,计调中心表tbl_Plan增加:ContactName(联系人),ContactPhone(联系电话),ContactFax(联系传真)字段,DeptId(部门编号)
+2,计调中心表tbl_Plan删除：SalePlus(销售增),SaleCut(销售减),GuidePlus(导游增),GuideCut(导游减),PlanerPlus(计调增),PlanerCut(计调减)、财务备注FinRemark、是否支出项IsOut、合计费用TotalCosts
+3,tbl_Plan 添加字段：Num int 0
+4,添加增减变更表:tbl_PlanCostChange
+5,计调中心表tbl_Plan增加:IsDelete是否删除(0,默认,1删除),ReceiveJourney(接待行程),CostDetail(费用明细/其它安排支出项目)、ServiceStandard(服务标准/返利标准),CustomerInfo(游客信息)、开始日期（接团日期、上团日期、入住日期、用车开始日期）StartDate、结束日期（送团日期、下团日期、离店日期、用车结束日期）EndDate、开始时间StartTime、结束时间EndTime
+6,删除地接管理表tbl_PlanAgency
+7,导游安排表tbl_PlanGuide删除:ServiceStandard(服务标准),删除:GuidePhone(导游电话)
+8,酒店安排表tbl_PlanHotel删除:FreeAmount(免房金额),添加:Days(天数)
+9,酒店房屋类型表tbl_PlanHotelRoom添加:Total(小计)
+10,用车安排表tbl_PlanCar添加:CarNumber(车牌号),Driver(司机),
+11,新增大交通班次安排表:tbl_PlanLargeFrequency
+12,大交通舱位管理表tbl_PlanLargeType添加:Insurance(保险),Fee(机建费),Surcharge(附加费),Discount(折扣),SumPrice(小计);删除:ParValue(票面值)
+13,景点安排表tbl_PlanAttractions添加:Attractions(景点名称),AdultNumber(成人数),ChildNumber(儿童数)
+	删除：开始日期，开始时间，结束日期，结束时间
+
+14、游轮自费/楼层项目管理（tbl_PlanShipOwnCost）
+	删除：收款方式Payment、自费项目ProjectId
+	新增：自费项目/楼层OwnItem、人数PeopleNum、是否楼层IsFloor
+
+15、游轮价格管理表tbl_PlanShipPrice
+	新增：儿童数(不占床)ChildNoOccupancy、儿童价(不占床)ChildNoOccupancyPrice、婴儿数BabyNumber
+		、婴儿价BabyNumberPrice、人群类型CrowdType、房型/舱位RoomType、
+	删除：单价类型PriceType、等级Grade
+
+16、删除表游轮人群管理表（tbl_PlanShipCrowd）
+
+17、游轮安排表（tbl_PlanShip）
+	新增：游轮类别CategoryType、登船码头LoadDock、登船号LoadCode、航线/线路Line
+		、停靠景点/包含景点Sight
+	删除：线路编号LineId、涉外游船(房型)RoomType、涉外游船(楼层)Floor、涉外游船(备注)Remarks
+		、涉外游船(是否含中餐)IsMeal、涉外游船(小费)IsTip、游轮类别Category
+
+18、用餐安排表（tbl_PlanDining）
+	删除：全程用餐IsFullMeal、用餐早Breakfast、用餐中Lunch、用餐晚Supper、用餐次数Frequency
+
+19、用餐价格管理表（tbl_PlanDiningPrice）
+	新增：价格类型（成人/儿童）Pricetyp、是否含早餐IsContainB、早餐次数TimeB、早餐人数PeopleB、早餐餐标PriceB
+		、是否含中餐IsContainL、中餐次数TimeL、中餐人数PeopleL、中餐餐标PriceL
+		、是否含晚餐IsContainS、晚餐次数TimeS、晚餐人数PeopleS、晚餐餐标PriceS
+	删除：成人餐标AdultPrice、儿童餐标ChildPrice、成人数AdultNumber、儿童数ChildNumber
+
+20、删除购物点安排表（tbl_PlanShopping）
+
+21、删除领料安排价格表（tbl_PlanPicking）
+
+22、删除领料内容安排表（tbl_PlanPickingContent）
+
+23、删除保险信息表（tbl_PlanInsurance）
+
+24、删除签证信息表（tbl_PlanVisa）
+
+25、删除景点价格表（tbl_PlanAttractionsPrice）
+
+26、删除预付申请表（tbl_PlanPrepaid）
+
+27、删除计调变更表（tbl_PlanChange）

@@ -1,0 +1,1259 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F23093C8-140A-4882-9B27-C2154BF48A13}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.YlWeb</RootNamespace>
+    <AssemblyName>EyouSoft.YlWeb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Adpost.Common.License, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\Adpost.Common.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Adpost.Common.Office, Version=1.0.3664.30643, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\bin\Adpost.Common.Office.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Jayrock.Json, Version=0.9.8316.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\Jayrock.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PayAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\PayAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="UPOPSDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\UPOPSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="99bill\receive.aspx.cs">
+      <DependentUpon>receive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="99bill\receive.aspx.designer.cs">
+      <DependentUpon>receive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="99bill\send.aspx.cs">
+      <DependentUpon>send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="99bill\send.aspx.designer.cs">
+      <DependentUpon>send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\Alipay_Notify.aspx.cs">
+      <DependentUpon>Alipay_Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alipay\Alipay_Notify.aspx.designer.cs">
+      <DependentUpon>Alipay_Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\Alipay_Return.aspx.cs">
+      <DependentUpon>Alipay_Return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alipay\Alipay_Return.aspx.designer.cs">
+      <DependentUpon>Alipay_Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\Alipay_Trade.aspx.cs">
+      <DependentUpon>Alipay_Trade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alipay\Alipay_Trade.aspx.designer.cs">
+      <DependentUpon>Alipay_Trade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetHotSell.ashx.cs">
+      <DependentUpon>GetHotSell.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetImg.ashx.cs">
+      <DependentUpon>GetImg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetProvinceAndCity.ashx.cs">
+      <DependentUpon>GetProvinceAndCity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ValidateCode.ashx.cs">
+      <DependentUpon>ValidateCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ProductHot.aspx.cs">
+      <DependentUpon>ProductHot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ProductHot.aspx.designer.cs">
+      <DependentUpon>ProductHot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ProductTeJia.aspx.cs">
+      <DependentUpon>ProductTeJia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ProductTeJia.aspx.designer.cs">
+      <DependentUpon>ProductTeJia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\ReXiao.aspx.cs">
+      <DependentUpon>ReXiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\ReXiao.aspx.designer.cs">
+      <DependentUpon>ReXiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\SouSuo.aspx.cs">
+      <DependentUpon>SouSuo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\SouSuo.aspx.designer.cs">
+      <DependentUpon>SouSuo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\FengCai.aspx.cs">
+      <DependentUpon>FengCai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\FengCai.aspx.designer.cs">
+      <DependentUpon>FengCai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\HuiYuanFuWu.aspx.cs">
+      <DependentUpon>HuiYuanFuWu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\HuiYuanFuWu.aspx.designer.cs">
+      <DependentUpon>HuiYuanFuWu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\JianJie.aspx.cs">
+      <DependentUpon>JianJie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\JianJie.aspx.designer.cs">
+      <DependentUpon>JianJie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\LianXi.aspx.cs">
+      <DependentUpon>LianXi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\LianXi.aspx.designer.cs">
+      <DependentUpon>LianXi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\RongYu.aspx.cs">
+      <DependentUpon>RongYu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\RongYu.aspx.designer.cs">
+      <DependentUpon>RongYu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\ShouHouFuWu.aspx.cs">
+      <DependentUpon>ShouHouFuWu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\ShouHouFuWu.aspx.designer.cs">
+      <DependentUpon>ShouHouFuWu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\WenHua.aspx.cs">
+      <DependentUpon>WenHua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\WenHua.aspx.designer.cs">
+      <DependentUpon>WenHua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\XinShouZhiNan.aspx.cs">
+      <DependentUpon>XinShouZhiNan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\XinShouZhiNan.aspx.designer.cs">
+      <DependentUpon>XinShouZhiNan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\YiJian.aspx.cs">
+      <DependentUpon>YiJian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\YiJian.aspx.designer.cs">
+      <DependentUpon>YiJian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\ZhaoPin.aspx.cs">
+      <DependentUpon>ZhaoPin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\ZhaoPin.aspx.designer.cs">
+      <DependentUpon>ZhaoPin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\ZhiFuFangShi.aspx.cs">
+      <DependentUpon>ZhiFuFangShi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\ZhiFuFangShi.aspx.designer.cs">
+      <DependentUpon>ZhiFuFangShi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\ZiXun.aspx.cs">
+      <DependentUpon>ZiXun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\ZiXun.aspx.designer.cs">
+      <DependentUpon>ZiXun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corp\ZiXunXX.aspx.cs">
+      <DependentUpon>ZiXunXX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corp\ZiXunXX.aspx.designer.cs">
+      <DependentUpon>ZiXunXX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HaiYang.aspx.cs">
+      <DependentUpon>HaiYang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HaiYang.aspx.designer.cs">
+      <DependentUpon>HaiYang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HangQi.aspx.cs">
+      <DependentUpon>HangQi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HangQi.aspx.designer.cs">
+      <DependentUpon>HangQi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\ChaXun.aspx.cs">
+      <DependentUpon>ChaXun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\ChaXun.aspx.designer.cs">
+      <DependentUpon>ChaXun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\DingDanXX.aspx.cs">
+      <DependentUpon>DingDanXX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\DingDanXX.aspx.designer.cs">
+      <DependentUpon>DingDanXX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\HaiYangInfo.aspx.cs">
+      <DependentUpon>HaiYangInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\HaiYangInfo.aspx.designer.cs">
+      <DependentUpon>HaiYangInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\HangQiInfo.aspx.cs">
+      <DependentUpon>HangQiInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\HangQiInfo.aspx.designer.cs">
+      <DependentUpon>HangQiInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\HangQiList.aspx.cs">
+      <DependentUpon>HangQiList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\HangQiList.aspx.designer.cs">
+      <DependentUpon>HangQiList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\JiFenDingDanXX.aspx.cs">
+      <DependentUpon>JiFenDingDanXX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\JiFenDingDanXX.aspx.designer.cs">
+      <DependentUpon>JiFenDingDanXX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\OrderPay.aspx.cs">
+      <DependentUpon>OrderPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\OrderPay.aspx.designer.cs">
+      <DependentUpon>OrderPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hangqi\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hangqi\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HuiYuanPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\DingDan.aspx.cs">
+      <DependentUpon>DingDan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\DingDan.aspx.designer.cs">
+      <DependentUpon>DingDan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\JiFen.aspx.cs">
+      <DependentUpon>JiFen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\JiFen.aspx.designer.cs">
+      <DependentUpon>JiFen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\LiPinKa.aspx.cs">
+      <DependentUpon>LiPinKa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\LiPinKa.aspx.designer.cs">
+      <DependentUpon>LiPinKa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\MiMa.aspx.cs">
+      <DependentUpon>MiMa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\MiMa.aspx.designer.cs">
+      <DependentUpon>MiMa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\MyInformation.aspx.cs">
+      <DependentUpon>MyInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\MyInformation.aspx.designer.cs">
+      <DependentUpon>MyInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\ShouCang.aspx.cs">
+      <DependentUpon>ShouCang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\ShouCang.aspx.designer.cs">
+      <DependentUpon>ShouCang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\TiXing.aspx.cs">
+      <DependentUpon>TiXing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\TiXing.aspx.designer.cs">
+      <DependentUpon>TiXing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\TouXiang.aspx.cs">
+      <DependentUpon>TouXiang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\TouXiang.aspx.designer.cs">
+      <DependentUpon>TouXiang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\YouKe.aspx.cs">
+      <DependentUpon>YouKe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\YouKe.aspx.designer.cs">
+      <DependentUpon>YouKe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyuan\YouKeEdit.aspx.cs">
+      <DependentUpon>YouKeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyuan\YouKeEdit.aspx.designer.cs">
+      <DependentUpon>YouKeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Install\Install.aspx.cs">
+      <DependentUpon>Install.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Install\Install.aspx.designer.cs">
+      <DependentUpon>Install.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Install\SystemExpired.aspx.cs">
+      <DependentUpon>SystemExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Install\SystemExpired.aspx.designer.cs">
+      <DependentUpon>SystemExpired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jifen\JifenAddress.aspx.cs">
+      <DependentUpon>JifenAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jifen\JifenAddress.aspx.designer.cs">
+      <DependentUpon>JifenAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jifen\JifenInfo.aspx.cs">
+      <DependentUpon>JifenInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jifen\JifenInfo.aspx.designer.cs">
+      <DependentUpon>JifenInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jifen\JifenList.aspx.cs">
+      <DependentUpon>JifenList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jifen\JifenList.aspx.designer.cs">
+      <DependentUpon>JifenList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lipinka\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lipinka\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logindomain.aspx.cs">
+      <DependentUpon>logindomain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logindomain.aspx.designer.cs">
+      <DependentUpon>logindomain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="map.aspx.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="map.aspx.designer.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Boxy.Master.cs">
+      <DependentUpon>Boxy.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Boxy.Master.designer.cs">
+      <DependentUpon>Boxy.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\HuiYuan.Master.cs">
+      <DependentUpon>HuiYuan.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\HuiYuan.Master.designer.cs">
+      <DependentUpon>HuiYuan.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\M1.Master.cs">
+      <DependentUpon>M1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\M1.Master.designer.cs">
+      <DependentUpon>M1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Print.Master.cs">
+      <DependentUpon>Print.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Print.Master.designer.cs">
+      <DependentUpon>Print.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Print\QueRenDan.aspx.cs">
+      <DependentUpon>QueRenDan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print\QueRenDan.aspx.designer.cs">
+      <DependentUpon>QueRenDan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print\XingChengDan.aspx.cs">
+      <DependentUpon>XingChengDan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print\XingChengDan.aspx.designer.cs">
+      <DependentUpon>XingChengDan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reset.aspx.cs">
+      <DependentUpon>Reset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reset.aspx.designer.cs">
+      <DependentUpon>Reset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TuanGou\TuanGouPiao.aspx.cs">
+      <DependentUpon>TuanGouPiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TuanGou\TuanGouPiao.aspx.designer.cs">
+      <DependentUpon>TuanGouPiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TuanGou\TuanGouXiangQing.aspx.cs">
+      <DependentUpon>TuanGouXiangQing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TuanGou\TuanGouXiangQing.aspx.designer.cs">
+      <DependentUpon>TuanGouXiangQing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TuPian.cs" />
+    <Compile Include="unionpay\Unionpay_Trade.aspx.cs">
+      <DependentUpon>Unionpay_Trade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="unionpay\Unionpay_Trade.aspx.designer.cs">
+      <DependentUpon>Unionpay_Trade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unionpay\Unionpay_Notify.aspx.cs">
+      <DependentUpon>Unionpay_Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="unionpay\Unionpay_Notify.aspx.designer.cs">
+      <DependentUpon>Unionpay_Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unionpay\Unionpay_Return.aspx.cs">
+      <DependentUpon>Unionpay_Return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="unionpay\Unionpay_Return.aspx.designer.cs">
+      <DependentUpon>Unionpay_Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BangZhu.ascx.cs">
+      <DependentUpon>BangZhu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\BangZhu.ascx.designer.cs">
+      <DependentUpon>BangZhu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FLDH.ascx.cs">
+      <DependentUpon>FLDH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FLDH.ascx.designer.cs">
+      <DependentUpon>FLDH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GuanZhu.ascx.cs">
+      <DependentUpon>GuanZhu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\GuanZhu.ascx.designer.cs">
+      <DependentUpon>GuanZhu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\HistoryView.ascx.cs">
+      <DependentUpon>HistoryView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\HistoryView.ascx.designer.cs">
+      <DependentUpon>HistoryView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\JiFenHotList.ascx.cs">
+      <DependentUpon>JiFenHotList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\JiFenHotList.ascx.designer.cs">
+      <DependentUpon>JiFenHotList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Navhead.ascx.cs">
+      <DependentUpon>Navhead.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Navhead.ascx.designer.cs">
+      <DependentUpon>Navhead.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Navfoot.ascx.cs">
+      <DependentUpon>Navfoot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Navfoot.ascx.designer.cs">
+      <DependentUpon>Navfoot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\NavLeft.ascx.cs">
+      <DependentUpon>NavLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\NavLeft.ascx.designer.cs">
+      <DependentUpon>NavLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProductHot.ascx.cs">
+      <DependentUpon>ProductHot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProductHot.ascx.designer.cs">
+      <DependentUpon>ProductHot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProductTeJia.ascx.cs">
+      <DependentUpon>ProductTeJia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProductTeJia.ascx.designer.cs">
+      <DependentUpon>ProductTeJia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TopGuangGao.ascx.cs">
+      <DependentUpon>TopGuangGao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TopGuangGao.ascx.designer.cs">
+      <DependentUpon>TopGuangGao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UploadControl.ascx.cs">
+      <DependentUpon>UploadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UploadControl.ascx.designer.cs">
+      <DependentUpon>UploadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WzPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\DaHuiYi.aspx.cs">
+      <DependentUpon>DaHuiYi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\DaHuiYi.aspx.designer.cs">
+      <DependentUpon>DaHuiYi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\HuiYiAnLi.aspx.cs">
+      <DependentUpon>HuiYiAnLi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\HuiYiAnLi.aspx.designer.cs">
+      <DependentUpon>HuiYiAnLi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\HuiYiDesc.aspx.cs">
+      <DependentUpon>HuiYiDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\HuiYiDesc.aspx.designer.cs">
+      <DependentUpon>HuiYiDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\HuiYiShenQing.aspx.cs">
+      <DependentUpon>HuiYiShenQing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\HuiYiShenQing.aspx.designer.cs">
+      <DependentUpon>HuiYiShenQing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\XiaoHuiYi.aspx.cs">
+      <DependentUpon>XiaoHuiYi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\XiaoHuiYi.aspx.designer.cs">
+      <DependentUpon>XiaoHuiYi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\YouLunFeiYong.aspx.cs">
+      <DependentUpon>YouLunFeiYong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\YouLunFeiYong.aspx.designer.cs">
+      <DependentUpon>YouLunFeiYong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\YouLunHuiYi.aspx.cs">
+      <DependentUpon>YouLunHuiYi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\YouLunHuiYi.aspx.designer.cs">
+      <DependentUpon>YouLunHuiYi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Huiyi\YouLunShangWu.aspx.cs">
+      <DependentUpon>YouLunShangWu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Huiyi\YouLunShangWu.aspx.designer.cs">
+      <DependentUpon>YouLunShangWu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Youlun\ChuanZhi.aspx.cs">
+      <DependentUpon>ChuanZhi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Youlun\ChuanZhi.aspx.designer.cs">
+      <DependentUpon>ChuanZhi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Youlun\ChuanZhiCJ.aspx.cs">
+      <DependentUpon>ChuanZhiCJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Youlun\ChuanZhiCJ.aspx.designer.cs">
+      <DependentUpon>ChuanZhiCJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Youlun\GongSis.aspx.cs">
+      <DependentUpon>GongSis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Youlun\GongSis.aspx.designer.cs">
+      <DependentUpon>GongSis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Youlun\YouLunGongSi.aspx.cs">
+      <DependentUpon>YouLunGongSi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Youlun\YouLunGongSi.aspx.designer.cs">
+      <DependentUpon>YouLunGongSi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Youlun\YouLunGongSiCJ.aspx.cs">
+      <DependentUpon>YouLunGongSiCJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Youlun\YouLunGongSiCJ.aspx.designer.cs">
+      <DependentUpon>YouLunGongSiCJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="__notify\__notify.aspx.cs">
+      <DependentUpon>__notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="__notify\__notify.aspx.designer.cs">
+      <DependentUpon>__notify.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\IDAL.Configuration.xml" />
+    <Content Include="Css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\11.jpg" />
+    <Content Include="images\22.jpg" />
+    <Content Include="images\33.jpg" />
+    <Content Include="images\add.png" />
+    <Content Include="images\all.png" />
+    <Content Include="images\banner_bg.png" />
+    <Content Include="images\banner_icon.png" />
+    <Content Include="images\basic_mainTbg.jpg" />
+    <Content Include="images\bot_jt.png" />
+    <Content Include="images\box_btn.png" />
+    <Content Include="images\bselect_jt.png" />
+    <Content Include="images\btn.jpg" />
+    <Content Include="images\btn02.png" />
+    <Content Include="images\btn03.png" />
+    <Content Include="images\b_menubg.jpg" />
+    <Content Include="images\b_topbg.jpg" />
+    <Content Include="images\b_topbg1.jpg" />
+    <Content Include="images\chren.png" />
+    <Content Include="images\cj_banner1.jpg" />
+    <Content Include="images\cj_img.jpg" />
+    <Content Include="images\code.jpg" />
+    <Content Include="images\company01.jpg" />
+    <Content Include="images\company_tabbg.png" />
+    <Content Include="images\ert.png" />
+    <Content Include="images\fxk_bg.png" />
+    <Content Include="images\grayjt_down.gif" />
+    <Content Include="images\grayjt_up.gif" />
+    <Content Include="images\help_libg.jpg" />
+    <Content Include="images\history_01.jpg" />
+    <Content Include="images\history_l.png" />
+    <Content Include="images\histroy_r.png" />
+    <Content Include="images\hy_icon.jpg" />
+    <Content Include="images\hy_img.jpg" />
+    <Content Include="images\hy_img001.jpg" />
+    <Content Include="images\hy_img01.jpg" />
+    <Content Include="images\hy_img02.jpg" />
+    <Content Include="images\hy_menubg.jpg" />
+    <Content Include="images\hy_menubg01.jpg" />
+    <Content Include="images\hy_menuR.png" />
+    <Content Include="images\hy_sqicon.png" />
+    <Content Include="images\hy_tj.png" />
+    <Content Include="images\icon01.png" />
+    <Content Include="images\icon02.png" />
+    <Content Include="images\jf_jt.png" />
+    <Content Include="images\jf_jt_down.png" />
+    <Content Include="images\jf_jt_up.png" />
+    <Content Include="images\jiantouB.png" />
+    <Content Include="images\jiantouR.png" />
+    <Content Include="images\jian_bank.jpg" />
+    <Content Include="images\jiesuan_btnl.png" />
+    <Content Include="images\jiesuan_btnr.png" />
+    <Content Include="images\jindiantu.jpg" />
+    <Content Include="images\jt_t.png" />
+    <Content Include="images\leftT.jpg" />
+    <Content Include="images\left_jt.jpg" />
+    <Content Include="images\line_yd.png" />
+    <Content Include="images\link01.jpg" />
+    <Content Include="images\login_btn.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\lpk_btn.png" />
+    <Content Include="images\lpk_btn2.png" />
+    <Content Include="images\lpk_btn3.png" />
+    <Content Include="images\lpk_icon.png" />
+    <Content Include="images\lpk_step1.jpg" />
+    <Content Include="images\lpk_step2.jpg" />
+    <Content Include="images\lpk_step3.jpg" />
+    <Content Include="images\lpk_tbg.jpg" />
+    <Content Include="images\mainT.jpg" />
+    <Content Include="images\main_botbg.jpg" />
+    <Content Include="images\main_topbg.jpg" />
+    <Content Include="images\menubg_tg.jpg" />
+    <Content Include="images\menu_jt.png" />
+    <Content Include="images\menu_jt02.png" />
+    <Content Include="images\menu_line.png" />
+    <Content Include="images\more.png" />
+    <Content Include="images\num_l.jpg" />
+    <Content Include="images\num_r.jpg" />
+    <Content Include="images\online_book.jpg" />
+    <Content Include="images\pic01.jpg" />
+    <Content Include="images\pic01_1.jpg" />
+    <Content Include="images\pic01_2.jpg" />
+    <Content Include="images\print-btn.png" />
+    <Content Include="images\print_xc.png" />
+    <Content Include="images\queren.png" />
+    <Content Include="images\radio_bg.png" />
+    <Content Include="images\rightT.jpg" />
+    <Content Include="images\rili_left.jpg" />
+    <Content Include="images\rili_right.jpg" />
+    <Content Include="images\r_jt.jpg" />
+    <Content Include="images\star.png" />
+    <Content Include="images\step01.jpg" />
+    <Content Include="images\step01_1.jpg" />
+    <Content Include="images\step02.jpg" />
+    <Content Include="images\step02_1.jpg" />
+    <Content Include="images\step03.jpg" />
+    <Content Include="images\step03_1.jpg" />
+    <Content Include="images\step04.jpg" />
+    <Content Include="images\step04_1.jpg" />
+    <Content Include="images\step05.jpg" />
+    <Content Include="images\step05_1.jpg" />
+    <Content Include="images\tabbg.png" />
+    <Content Include="images\tabbgon.png" />
+    <Content Include="images\tab_yleft.png" />
+    <Content Include="images\tab_yright.png" />
+    <Content Include="images\tbtj.png" />
+    <Content Include="images\tel.png" />
+    <Content Include="images\tgp_banner1.jpg" />
+    <Content Include="images\tg_btn.png" />
+    <Content Include="images\tg_btn2.png" />
+    <Content Include="images\tg_sc.png" />
+    <Content Include="images\tg_sc2.png" />
+    <Content Include="images\weix.jpg" />
+    <Content Include="images\white_jtl.png" />
+    <Content Include="images\white_jtr.png" />
+    <Content Include="images\xch_01.jpg" />
+    <Content Include="images\xch_Tbg.png" />
+    <Content Include="images\xx_ydbtn.png" />
+    <Content Include="images\xz_bg.png" />
+    <Content Include="images\xz_bg02.png" />
+    <Content Include="images\yd-1.jpg" />
+    <Content Include="images\yd-2.jpg" />
+    <Content Include="images\yd-3.jpg" />
+    <Content Include="images\yd_xx.png" />
+    <Content Include="images\yd_xximg01.jpg" />
+    <Content Include="images\yd_xximg02.jpg" />
+    <Content Include="images\ylhy_banner1.jpg" />
+    <Content Include="images\yudin_bg.png" />
+    <Content Include="images\yudin_s.png" />
+    <Content Include="images\yudin_y.png" />
+    <Content Include="images\y_jiantouB.png" />
+    <Content Include="images\y_jiantouT.png" />
+    <Content Include="images\zfb_bank.jpg" />
+    <Content Include="images\zf_btn.png" />
+    <Content Include="images\zhg_bank.jpg" />
+    <Content Include="Jifen\JifenInfo.aspx" />
+    <Content Include="Jifen\JifenList.aspx" />
+    <Content Include="Js\city.js" />
+    <Content Include="Js\foucs.js" />
+    <Content Include="Js\jquery-1.4.2.min.js" />
+    <Content Include="Js\jquery.blockUI.js" />
+    <Content Include="Js\popup_layer.js" />
+    <Content Include="Js\table-toolbar.js" />
+    <Content Include="Js\ValiDatorForm.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginOut.aspx" />
+    <Content Include="MasterPage\Boxy.Master" />
+    <Content Include="Register.aspx" />
+    <Content Include="UserControl\Navhead.ascx" />
+    <Content Include="UserControl\Navfoot.ascx" />
+    <Content Include="UserControl\NavLeft.ascx" />
+    <Content Include="UserControl\ProductHot.ascx" />
+    <Content Include="UserControl\ProductTeJia.ascx" />
+    <Content Include="UserControl\TopGuangGao.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{304DA533-83AB-4A46-B3E9-A957B24FB675}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlLibrary\ControlLibrary.csproj">
+      <Project>{136A722D-1FF1-4EBD-80CB-B87B5CE441B5}</Project>
+      <Name>ControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.BLL\EyouSoft.BLL.csproj">
+      <Project>{0EEEFB4F-491A-4002-BC15-BFD9CB252063}</Project>
+      <Name>EyouSoft.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Model\EyouSoft.Model.csproj">
+      <Project>{41BB31BF-A4C6-4994-AFBA-B559034010C7}</Project>
+      <Name>EyouSoft.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Security.Membership\EyouSoft.Security.Membership.csproj">
+      <Project>{AFA01A24-E10D-4B4C-BC41-C88537B7B314}</Project>
+      <Name>EyouSoft.Security.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Toolkit\EyouSoft.Toolkit.csproj">
+      <Project>{99A84C7E-8F77-45C7-865E-C84478BC1EDC}</Project>
+      <Name>EyouSoft.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\user-zhuce.png" />
+    <Content Include="images\user_reg.jpg" />
+    <Content Include="Jifen\JifenAddress.aspx" />
+    <Content Include="MasterPage\HuiYuan.Master" />
+    <Content Include="UserControl\JiFenHotList.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\GetProvinceAndCity.ashx" />
+    <Content Include="Corp\JianJie.aspx" />
+    <Content Include="Hangqi\HangQiInfo.aspx" />
+    <Content Include="Hangqi\HangQiList.aspx" />
+    <Content Include="Huiyuan\DingDan.aspx" />
+    <Content Include="Huiyuan\JiFen.aspx" />
+    <Content Include="Huiyuan\LiPinKa.aspx" />
+    <Content Include="Huiyuan\MiMa.aspx" />
+    <Content Include="Huiyuan\MyInformation.aspx" />
+    <Content Include="Huiyuan\ShouCang.aspx" />
+    <Content Include="Huiyuan\TiXing.aspx" />
+    <Content Include="Huiyuan\TouXiang.aspx" />
+    <Content Include="Huiyuan\YouKe.aspx" />
+    <Content Include="Huiyuan\YouKeEdit.aspx" />
+    <Content Include="images\a.jpg" />
+    <Content Include="images\big_head.jpg" />
+    <Content Include="images\close01.png" />
+    <Content Include="images\com_menubg.gif" />
+    <Content Include="images\dianp_T.jpg" />
+    <Content Include="images\fc.jpg" />
+    <Content Include="images\feiyong_T.jpg" />
+    <Content Include="images\glue_T.jpg" />
+    <Content Include="images\head.jpg" />
+    <Content Include="images\head_bg.jpg" />
+    <Content Include="images\lxwm.jpg" />
+    <Content Include="images\page_left.jpg" />
+    <Content Include="images\page_right.jpg" />
+    <Content Include="images\q.jpg" />
+    <Content Include="images\ryu.jpg" />
+    <Content Include="images\tc_bg.gif" />
+    <Content Include="images\tc_btn01.png" />
+    <Content Include="images\user-btn01.png" />
+    <Content Include="images\user-dian.png" />
+    <Content Include="images\user-loginbtn.jpg" />
+    <Content Include="images\user_add_btn.jpg" />
+    <Content Include="images\user_btn03.jpg" />
+    <Content Include="images\use_btn02.jpg" />
+    <Content Include="images\wenda_T.jpg" />
+    <Content Include="images\x01.jpg" />
+    <Content Include="images\x02.jpg" />
+    <Content Include="images\youq_T.jpg" />
+    <Content Include="images\yuding_T.jpg" />
+    <Content Include="Js\datepicker\calendar.js" />
+    <Content Include="Js\datepicker\lang\en.js" />
+    <Content Include="Js\datepicker\lang\zh-cn.js" />
+    <Content Include="Js\datepicker\lang\zh-tw.js" />
+    <Content Include="Js\datepicker\skin\datePicker.gif" />
+    <Content Include="Js\datepicker\skin\default\datepicker.css" />
+    <Content Include="Js\datepicker\skin\default\img.gif" />
+    <Content Include="Js\datepicker\skin\WdatePicker.css" />
+    <Content Include="Js\datepicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Js\datepicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Js\datepicker\skin\whyGreen\img.gif" />
+    <Content Include="Js\datepicker\WdatePicker.js" />
+    <Content Include="Js\gscx.js" />
+    <Content Include="Huiyi\DaHuiYi.aspx" />
+    <Content Include="Huiyi\HuiYiAnLi.aspx" />
+    <Content Include="Huiyi\HuiYiDesc.aspx" />
+    <Content Include="Huiyi\HuiYiShenQing.aspx" />
+    <Content Include="Huiyi\XiaoHuiYi.aspx" />
+    <Content Include="Huiyi\YouLunFeiYong.aspx" />
+    <Content Include="Huiyi\YouLunHuiYi.aspx" />
+    <Content Include="Huiyi\YouLunShangWu.aspx" />
+    <Content Include="Js\Rili.js" />
+    <Content Include="Lipinka\Default.aspx" />
+    <Content Include="TuanGou\TuanGouPiao.aspx" />
+    <Content Include="TuanGou\TuanGouXiangQing.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Corp\FengCai.aspx" />
+    <Content Include="Corp\HuiYuanFuWu.aspx" />
+    <Content Include="Corp\LianXi.aspx" />
+    <Content Include="Corp\RongYu.aspx" />
+    <Content Include="Corp\ShouHouFuWu.aspx" />
+    <Content Include="Corp\XinShouZhiNan.aspx" />
+    <Content Include="Corp\ZhaoPin.aspx" />
+    <Content Include="Corp\ZhiFuFangShi.aspx" />
+    <Content Include="Hangqi\HaiYangInfo.aspx" />
+    <Content Include="Hangqi\OrderPay.aspx" />
+    <Content Include="Js\ajaxpagecontrols.js" />
+    <Content Include="Js\slogin.js" />
+    <Content Include="logindomain.aspx" />
+    <Content Include="MasterPage\M1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alipay\Alipay_Notify.aspx" />
+    <Content Include="alipay\Alipay_Return.aspx" />
+    <Content Include="alipay\Alipay_Trade.aspx" />
+    <Content Include="Ashx\Handler.ashx" />
+    <Content Include="CommonPage\upload.aspx" />
+    <Content Include="Corp\ZiXun.aspx" />
+    <Content Include="Corp\ZiXunXX.aspx" />
+    <Content Include="Css\swfupload\default.css" />
+    <Content Include="HaiYang.aspx" />
+    <Content Include="Hangqi\DingDanXX.aspx" />
+    <Content Include="images\swfupload\XPButtonNoText_160x22.png" />
+    <Content Include="images\swfupload\XPButtonNoText_178_34.gif" />
+    <Content Include="images\swfupload\XPButtonNoText_92_24.gif" />
+    <Content Include="images\swfupload\XPButtonUploadText_61x22.png" />
+    <Content Include="Js\swfupload\handlers.js" />
+    <Content Include="Js\swfupload\swfupload.js" />
+    <Content Include="Js\swfupload\swfupload.swf" />
+    <Content Include="Js\swfupload\swfupload.swfobject.js" />
+    <Content Include="UserControl\BangZhu.ascx" />
+    <Content Include="UserControl\GuanZhu.ascx" />
+    <Content Include="UserControl\HistoryView.ascx" />
+    <Content Include="UserControl\UploadControl.ascx" />
+    <Content Include="Youlun\ChuanZhi.aspx" />
+    <Content Include="Youlun\ChuanZhiCJ.aspx" />
+    <Content Include="Youlun\YouLunGongSi.aspx" />
+    <Content Include="Youlun\YouLunGongSiCJ.aspx" />
+    <Content Include="__notify\__notify.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="99bill\receive.aspx" />
+    <Content Include="99bill\send.aspx" />
+    <Content Include="Ashx\ValidateCode.ashx" />
+    <Content Include="Ashx\GetHotSell.ashx" />
+    <None Include="99bill\99bill-rsa.pfx" />
+    <None Include="99bill\99bill.cert.rsa.20140728.cer" />
+    <None Include="99bill\99bill.cert.rsa.20140728.cer.0001" />
+    <None Include="99bill\99bill.cert.rsa.20340630.cer" />
+    <None Include="99bill\99bill[1].cert.rsa.20140803.cer" />
+    <None Include="99bill\public-rsa.cer" />
+    <None Include="99bill\tester-rsa.pfx" />
+    <Content Include="CommonPage\SouSuo.aspx" />
+    <Content Include="Corp\YiJian.aspx" />
+    <Content Include="Css\jquery.autocomplete.css" />
+    <Content Include="ExcelDownTemp\default.dot" />
+    <Content Include="Ashx\GetImg.ashx" />
+    <None Include="images\swfupload\Thumbs.db" />
+    <Content Include="CommonPage\ProductHot.aspx" />
+    <Content Include="CommonPage\ProductTeJia.aspx" />
+    <Content Include="CommonPage\ReXiao.aspx" />
+    <Content Include="Corp\WenHua.aspx" />
+    <Content Include="Css\print.css" />
+    <Content Include="HangQi.aspx" />
+    <Content Include="Hangqi\ChaXun.aspx" />
+    <Content Include="Hangqi\JiFenDingDanXX.aspx" />
+    <Content Include="Hangqi\Search.aspx" />
+    <Content Include="images\banklogo\bank_99bill.jpg" />
+    <Content Include="images\banklogo\bank_abc.gif" />
+    <Content Include="images\banklogo\bank_alipay.jpg" />
+    <Content Include="images\banklogo\bank_bcom.gif" />
+    <Content Include="images\banklogo\bank_bea.gif" />
+    <Content Include="images\banklogo\bank_bjrcb.gif" />
+    <Content Include="images\banklogo\bank_bob.gif" />
+    <Content Include="images\banklogo\bank_boc.gif" />
+    <Content Include="images\banklogo\bank_cbhb.gif" />
+    <Content Include="images\banklogo\bank_ccb.gif" />
+    <Content Include="images\banklogo\bank_ceb.gif" />
+    <Content Include="images\banklogo\bank_cib.gif" />
+    <Content Include="images\banklogo\bank_citic.gif" />
+    <Content Include="images\banklogo\bank_cmb.gif" />
+    <Content Include="images\banklogo\bank_cmbc.gif" />
+    <Content Include="images\banklogo\bank_czb.gif" />
+    <Content Include="images\banklogo\bank_gdb.gif" />
+    <Content Include="images\banklogo\bank_gzcb.gif" />
+    <Content Include="images\banklogo\bank_gzrcc.gif" />
+    <Content Include="images\banklogo\bank_hsb.gif" />
+    <Content Include="images\banklogo\bank_hxb.gif" />
+    <Content Include="images\banklogo\bank_hzb.gif" />
+    <Content Include="images\banklogo\bank_icbc.gif" />
+    <Content Include="images\banklogo\bank_nbcb.gif" />
+    <Content Include="images\banklogo\bank_njcb.gif" />
+    <Content Include="images\banklogo\bank_pab.gif" />
+    <Content Include="images\banklogo\bank_post.gif" />
+    <Content Include="images\banklogo\bank_sdb.gif" />
+    <Content Include="images\banklogo\bank_shb.gif" />
+    <Content Include="images\banklogo\bank_shrcc.gif" />
+    <Content Include="images\banklogo\bank_spdb.gif" />
+    <Content Include="images\banner_bg01.png" />
+    <Content Include="images\boxbg.jpg" />
+    <Content Include="images\city_001.jpg" />
+    <Content Include="images\city_002.jpg" />
+    <Content Include="images\cj_hoverbg.jpg" />
+    <Content Include="images\close_y.gif" />
+    <Content Include="images\daochu-cy.gif" />
+    <Content Include="images\dayin1-cy.gif" />
+    <Content Include="images\default-head.jpg" />
+    <Content Include="images\floorbg.png" />
+    <Content Include="images\fl_line.gif" />
+    <Content Include="images\gzh.png" />
+    <Content Include="images\hot.png" />
+    <Content Include="images\hy-icon01.gif" />
+    <Content Include="images\hy_hoverbg.jpg" />
+    <Content Include="images\i-focus.jpg" />
+    <Content Include="images\i-jxT.jpg" />
+    <Content Include="images\i-left.png" />
+    <Content Include="images\i-rexiaoT.jpg" />
+    <Content Include="images\i-right.png" />
+    <Content Include="images\i-ydbtn.gif" />
+    <Content Include="images\index_benner.jpg" />
+    <Content Include="images\index_fl.jpg" />
+    <Content Include="images\i_001.jpg" />
+    <Content Include="images\i_hoverbg.png" />
+    <Content Include="images\i_pricebg.png" />
+    <Content Include="images\jtou.png" />
+    <Content Include="images\kuhao.png" />
+    <Content Include="images\lg_icon.png" />
+    <Content Include="images\loadingnew.gif" />
+    <Content Include="images\l_bgb.png" />
+    <Content Include="images\l_bgr.png" />
+    <Content Include="images\numbg.gif" />
+    <Content Include="images\pwd_bg.gif" />
+    <Content Include="images\p_t.jpg" />
+    <Content Include="images\p_yejiao.jpg" />
+    <Content Include="images\p_yemei.jpg" />
+    <Content Include="images\s-yudinbtn.gif" />
+    <Content Include="images\sprite.png" />
+    <Content Include="images\swfupload\XPButtonNoText_178_34_01.gif" />
+    <Content Include="images\swfupload\XPButtonNoText_92_24_01.gif" />
+    <Content Include="images\s_img.gif" />
+    <Content Include="images\s_leftT.jpg" />
+    <Content Include="images\s_rightT.jpg" />
+    <Content Include="images\un_icon_arrow.png" />
+    <Content Include="images\WaterMark.png" />
+    <Content Include="images\weibo_code.jpg" />
+    <Content Include="images\weixin_code.jpg" />
+    <Content Include="images\wenti_t.jpg" />
+    <Content Include="images\yj_tj.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="Install\Install.aspx" />
+    <Content Include="Install\SystemExpired.aspx" />
+    <Content Include="Js\bt.min.js" />
+    <Content Include="Js\jquery.jpage.js" />
+    <Content Include="Js\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="Js\excanvas.js" />
+    <Content Include="Js\json2.js" />
+    <Content Include="Js\jsonsql-0.1.js" />
+    <Content Include="Js\Newjquery.autocomplete.js" />
+    <Content Include="Js\utilsUri.js" />
+    <Content Include="map.aspx" />
+    <Content Include="Print\QueRenDan.aspx" />
+    <Content Include="Print\XingChengDan.aspx" />
+    <Content Include="Reset.aspx" />
+    <Content Include="unionpay\conf.xml.config" />
+    <Content Include="unionpay\Unionpay_Trade.aspx" />
+    <Content Include="unionpay\Unionpay_Notify.aspx" />
+    <Content Include="unionpay\Unionpay_Return.aspx" />
+    <Content Include="UserControl\FLDH.ascx" />
+    <Content Include="Youlun\GongSis.aspx" />
+    <Content Include="MasterPage\Print.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Temp\word\" />
+    <Folder Include="ufiles\" />
+    <Folder Include="WUC\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2768</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

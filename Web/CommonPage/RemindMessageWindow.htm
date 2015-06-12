@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base target=_blank>
+    <title>消息提醒</title>
+    <style type="text/css">body {padding:0px; margin:0px;}</style>
+    
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" style="background: #78A6DC; border: 1px; width: 220px;">
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" style="font-size: 12px; width: 220px; border: 0px">
+                    <tr>
+                        <td style="background: url(/images/tixing.gif); height: 26px;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;消息提醒
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="TD_REMIND_MESSAGE">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <bgsound src="/images/sound/pm_1.wav" border="0">
+    <script type="text/javascript">
+        try {document.getElementById("TD_REMIND_MESSAGE").innerHTML=window.opener.document.getElementById("scrollDiv").innerHTML;}catch(e){}
+        try {setTimeout("window.close();",32000);}catch(e){}
+    </script>
+</body>
+</html>

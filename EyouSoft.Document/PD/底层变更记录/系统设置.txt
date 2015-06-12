@@ -1,0 +1,5 @@
+﻿1 系统设置增加会员类型表tbl_MemberType，只做标记用
+2 SELECT  CrmId, CompanyId,Name,(select ContactName from tbl_ComUser where UserId= tbl_Crm.SellerId ),
+(select   tbl_Crm.AmountOwed-sum(CheckMoney-ConfirmMoney) from tbl_TourOrder where IsClean=0 and Status=4  and BuyCompanyId=tbl_Crm.CrmId),
+(select  tbl_Crm.Deadline-(getdate()-)  from tbl_TourOrder where IsClean=0 and Status=4  and BuyCompanyId=tbl_Crm.CrmId),
+FROM         tbl_Crm

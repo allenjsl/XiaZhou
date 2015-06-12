@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OperaterPanyment.ascx.cs" Inherits="Web.UserControl.OperaterPanyment" %>
+<asp:DropDownList ID="ddlpayment" runat="server"></asp:DropDownList>

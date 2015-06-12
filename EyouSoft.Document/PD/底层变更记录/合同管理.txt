@@ -1,0 +1,20 @@
+﻿合同号信息表tbl_ContractNum字段：
+	合同编号ContractId，
+	公司编号CompanyId，
+	合同类型ContractType，
+	合同号ContractCode，
+	合同号状态ContractStatus(未领，已领，使用，销号，作废)，
+	部门编号DepartId,
+	操作人编号OperatorId，
+	操作时间IssueTime
+	
+合同号领用表tbl_ContractNumCollar字段：
+	领用编号CollariId，
+	合同编号ContractId，
+	合同号ContractCode，
+	领用部门编号DepartId，
+	领用人编号UseId，
+	操作人编号OperatorId，
+	操作时间IssueTime
+	
+删除表：合同销号表tbl_ContractDestroy，已使用合同信息tbl_ContractUsed

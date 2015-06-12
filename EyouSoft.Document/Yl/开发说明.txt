@@ -1,0 +1,8 @@
+﻿游轮开发说明
+pd:\EyouSoft.Document\PD\YL.pdm
+文档：\EyouSoft.Document\Yl\HBXZ-ERP-YL.docx
+前台web项目：\YlWeb\
+
+要是能安排人先处理的话 
+底层文件均放入相应项目下的YlStructure
+ERP部分放入 \WEB\YouLun\下

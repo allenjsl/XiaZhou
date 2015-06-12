@@ -1,0 +1,183 @@
+﻿html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table{ margin: 0; padding: 0; }
+img { border: 0 none; vertical-align: top;}
+ul, li { list-style-type: none;}
+h1, h2, h3, h4, h5, h6 { font-size: 14px; }
+body{background:#bcf1f3 url(../images/fx-images/fx-bodybg.gif) repeat-x top center;}
+body, input, select, button, textarea { font-size: 12px; font-family:""; vertical-align:middle;}
+button { cursor: pointer; }
+i, em, cite { font-style: normal; }
+.fixed:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; }
+.fixed { display: block; min-height: 1%; }
+*html .fixed { height: 1%; }
+.clear { diplay: block!important; float: none!important; clear: both; overflow: hidden; width: auto!important; height: 0!important; margin: 0 auto!important; padding: 0!important; font-size: 0; line-height: 0; }
+/*table{ border-collapse:collapse;}*/
+.hr_5,.hr_10{ clear:both; font-size:1px; line-height:1px;}
+.hr_5{ height:5px;} 
+.hr_10{ height:10px;}
+a{color:#1b4f86; text-decoration:none;}
+a:hover{ text-decoration:underline; color:#16387c;}
+a:focus {outline:none;}
+.fontbsize12{ color:#ed0000;}
+.fontblue{ color:#0242d3;}
+.fontgray{ color:#CCCCCC;}
+
+.banner{ width:100%; height:145px; margin:0 auto; background:url(../images/fx-images/fenxiaspt_right.gif) no-repeat right top;}
+.logo{ background:url(../images/fx-images/fenxiaspt_left.gif) no-repeat left bottom; height:145px; width:1000px; margin:0 auto;}
+.main{ width:900px; margin:-35px auto 0 auto;}
+.main .pub{ background:url(../images/fx-images/fenxiaspt03.gif) no-repeat top center; height:40px; text-indent:40px;}
+.main .pub p{ width:611px; padding-top:8px;}
+.main .pub a{ color:#FFFFFF; padding-left:15px;}
+.main .pub b{ color:#fcff00;}
+.content{ background:#FFFFFF; width:900px; margin:0 auto;}
+.fxsline-box{ float:left; width:618px;}
+.fxsline-boxT{ height:49px; line-height:49px; background:url(../images/fx-images/fenxiaspt04.gif) repeat-x left center;}
+.fxsline-boxT h3{ background:url(../images/fx-images/fenxiaspt05.gif) no-repeat left center; text-indent:-9999px;}
+.fxsline-list{ width:95%; margin:10px auto;}
+.fxsline-list a{ display:inline-block; width:116px; height:54px; line-height:30px; text-align:center; background:url(../images/fx-images/linebg.gif) no-repeat 0 0; font-size:14px; margin-top:2px;}
+.fxsline-list a:hover{ background-position:0 -66px; text-decoration:none; color:#f06000;}
+
+.sidebar{float:left; width:269px; margin-left:1px; }
+.login-box{background:#a9e0f0 url(../images/fx-images/fenxiasptloginbottombg.gif) no-repeat center bottom;}
+.login-box ul{ width:88%; margin:0 auto;}
+.login-box ul li{ height:38px; vertical-align:middle;}
+.login-box ul li a{ padding-left:15px; color:#0c7ea0;}
+.loginInputText{ border-style:solid; border-color:#3fa5c3 #95d2e4 #95d2e4 #3fa5c3; border-width:1px; height:26px; width:230px; line-height:26px; padding-left:5px; font-size:14px; color:#666666;}
+.yzm{ width:130px;}
+.login-box ul li.loginbtnbox{ height:50px; padding:5px 0 30px 0;}
+.login-box ul li.loginbtnbox .loginbtn{ width:123px; height:39px; border:0 none; background:url(../images/fx-images/fenxiasloginbtn.gif) no-repeat 0 0; text-indent:-9999px; float:left;} 
+.login-box ul li.loginbtnbox .loginbtn:hover{ background-position:0 -48px;}
+.contact{margin:15px auto; background:url(../images/fx-images/fenxiaspt07.gif) no-repeat right bottom;}
+.contact ul{border-color:#dddddd; border-width:0 1px 1px 1px; border-style:solid; padding-bottom:15px;}
+.contact ul li{ height:34px; font-size:14px; width:85%; margin:0 auto;}
+.footer{ width:900px; margin:0 auto; line-height:200%; text-align:center;}
+
+.addtimebtn,.timesicon,.xuanyong,.formtableT,.formtableT s{ background:url(../images/fromimg01.gif) no-repeat 0 -9999px; }
+.addtimebtn{background-position:0 0;width:55px; height:19px; line-height:19px; color:#000000; text-align:center;border:0 none; margin-left:5px; }
+/*******类页样式*******/
+.top{background:url(../images/fx-images/topbg.gif) repeat-x left bottom; height:111px; }
+.top .menubg{background:url(../images/fx-images/fxclass02.gif) no-repeat right top; height:105px;}
+.menu{ margin-top:11px;}
+.menu li{ float:left; margin-left:5px;}
+.menu li a{ display:block; float:left; background:url(../images/fx-images/menu-left.gif) no-repeat left 0; height:30px; line-height:30px; padding-left:20px; position:relative;}
+.menu li a span{ display:block; float:left; background:url(../images/fx-images/meun-right.gif) no-repeat right 0; padding:0 25px 0 18px; font-size:14px; color:#000000; cursor:pointer;}
+.menu li a.default,.menu li a:hover{ background:url(../images/fx-images/menu-left.gif) no-repeat left -36px; margin-top:2px; text-decoration:none;}
+.menu li a.default span,.menu li a:hover span{ background:url(../images/fx-images/meun-right.gif) no-repeat right -36px; font-weight:bold; color:#ffffff; text-decoration:none;}
+.menu li a span s{ display:inline-block; position:absolute; left:13px; top:5px; width:20px; height:19px; background:url(../images/fx-images/icon.gif) no-repeat 0 -9999px;}
+.menu li a.indexicon s{ background-position:0 -444px;}
+.menu li a.skjhicon s{ background-position:0 -23px;}
+.menu li a.orderformicon s{ background-position:0 -464px;}
+.menu li a.cawuglicon s{ background-position:0 -490px;}
+.menu li a.xtglicon s{ background-position:0 -510px;}
+.menu li a.Producticon s{background-position:0 -531px;}
+.list-main{margin:0 auto;}
+.pub{ height:32px; background:url(../images/fx-images/fxclass03.gif) repeat-x left center; line-height:32px; text-indent:20px; font-family:"宋体";}
+.pub span{ display:inline-block; font-weight:bold; color:#ed0000; background:url(../images/fx-images/pubicon.gif) no-repeat left center; float:left; margin-left:15px;}
+.pub a{ color:#777777; padding-left:18px;}
+.list-maincontent{ width:99%; margin:0 auto;}
+.linebox-menu{width:100%;}
+.linebox-menu a{ display:inline-block; width:95px; height:24px; background:url(../images/fx-images/linebg02.gif) no-repeat 0 0; line-height:24px; text-align:center; margin:6px 3px 0 0;}
+.linebox-menu a:hover,.linebox-menu a.linebox-menudefault{background:url(../images/fx-images/linebg02.gif) no-repeat 0 -31px; text-decoration:none; color:#f06000;}
+/******搜索*******/
+.listsearch{padding:6px 0 5px 8px; background:#f4f4f4; border-color:#92b3b9 #d3cbb4 #d3cbb4 #d3cbb4; border-width:1px 1px 0 1px; border-style:solid;}
+.searchInput{ height:19px; background:url(../images/fx-images/textbg.gif) repeat-x left top; border:1px #cccccc solid; width:110px; padding-left:2px; vertical-align:middle; line-height:19px;}
+.size170{ width:170px;}
+.size260{ width:260px;}
+.size40{ width:40px;}
+.size68{ width:68px;}
+.size130{ width:130px;}
+.textAreaSize{ width:550px; height:50px; background:url(../images/fx-images/textbg.gif) repeat-x left top; border:1px #cccccc solid;}
+.textAreaSize800{ width:800px;}
+.listtablebox{width:100%; margin:0 auto; overflow-x:auto; overflow-y:hidden; padding-bottom:10px;}
+.listtablebox table{ border-collapse:collapse;}
+.listtablebox table th{background-color:#dceff3; padding:7px 2px; border:#ccc solid 1px;}
+.listtablebox table td{ padding:5px 2px; border:#ccc solid 1px;}
+.font-orange{ color:#ff6600;} .font-green{ color:#356b14;} .fontb-red{ font-weight:bold; color:#ed0000;}
+.odd{background:#f2f2f2;}
+.highlight{ background:#fff8db;}
+.selected{ background:#FFFFCA;}	
+
+/******翻页*******/
+.pages{margin:5px 10px 0 0; text-align:center;}
+.pages span.current,.pages span.disabled{ color:#666666; margin-right: 2px; padding: 2px 3px;}
+.pages a{ padding:2px 5px; text-decoration:underline;}
+
+/****保存按钮******/
+.cunline{margin:0 auto; width:240px;}
+.cunline li{float:left; margin-right:15px;}
+.cun-cy a:link{background:url(../images/cun-cy.gif) no-repeat 0 0; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block;}
+.cun-cy a:visited{background:url(../images/cun-cy.gif) no-repeat 0 0; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block;}
+.cun-cy a:hover{background:url(../images/cun-cy.gif) no-repeat 0 -31px; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block; text-decoration:none;}
+.cun-cy a:active{background:url(../images/cun-cy.gif) no-repeat 0 -62px; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block;}
+/****取消按钮******/
+.quxiao-cy a:link{background:url(../images/quxiao-cy.gif) no-repeat 0 0; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block;}
+.quxiao-cy a:visited{background:url(../images/quxiao-cy.gif) no-repeat 0 0; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block;}
+.quxiao-cy a:hover{background:url(../images/quxiao-cy.gif) no-repeat 0 -31px; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block; text-decoration:none;}
+.quxiao-cy a:active{background:url(../images/quxiao-cy.gif) no-repeat 0 -62px; width:103px; height:31px; line-height:31px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF; display:block;}
+.timesicon,.formtableT,.formtableT s,.xuanyong{ background:url(../images/fromimg01.gif) no-repeat 0 -9999px;}
+.timesicon{display:inline-block; width:24px; height:19px; text-indent:-9999px; margin-left:1px; vertical-align:middle; background-position:0 -79px;}
+.formtableT{display:inline-block; background-position:-28px -102px; width:105px; height:24px; text-align:center; line-height:24px; font-weight:bold; position:relative;}
+.formtableT s{ background-position:0 -102px; display:inline-block; width:13px; height:14px; position:absolute; left:7px; top:5px;}
+.xuanyong{ display:inline-block;  background-position:0 -27px; width:39px; height:19px; margin:5px 0 5px 5px; vertical-align:middle; overflow:hidden;}
+.xuanyong:hover{ background-position:0 -53px; text-decoration:none;}
+
+
+/****yf-02-28******/
+.nojiacu{ font-weight:normal;}
+
+/******wl-05-23财务管理操作符的样式(游客)******************/
+.inputtext{height:19px; background:url(../images/fx-images/textbg.gif) repeat-x left top; border:1px #cccccc solid; width:110px; padding-left:2px; vertical-align:middle; line-height:19px;}
+.formsize50{width:50px;}
+.formsize80{width:80px;}
+.formsize100{width:100px;}
+.formsize120{width:120px;}
+
+
+/****yf-2012-04-18 上传文件按钮样式*****/
+.upload_filename{ height:16px; line-height:16px; border:#b4ebff solid 1px; background:#d8f0ff; margin:3px 5px; padding:2px 5px; display:inline-block;white-space: nowrap;transition:all 1s;-moz-transition:all 1s;-o-transition:all 1s;-ms-transition:all 1s;-webkit-transition:all 1s;}
+.upload_filename a{text-decoration:none;}
+.upload_filename:hover{ background-color:#45c4ef; box-shadow:0 0 8px 2px #b4ebff;}
+
+
+/****yf-2012-04-17 组团团队-新增报价* 提示信息*****/
+.tishi_info{height:23px; line-height:23px; text-align:left; background:#fff6c9; border:#f60 solid 1px; padding:0px 10px; font-size:14px; color:#f00; font-weight:bold;float:left; display:inline;margin-left:5px; position:relative;}
+
+
+/********2012-7-30 订单状态的样式*********************************************/
+.Fontred{ color:Red;}
+.Fontgreen{color:Green;}
+.Fontblue{ color:Blue;}
+.Fontgray{color:Gray;}
+
+/***yf-8-14***********网页右下角弹出广告**/
+*html body{background-image:url(about:blank);background-attachment:fixed;}/***ie6下抖动*****/
+
+.right_botbox{width:300px; position:fixed; z-index:99;bottom:0; right:5px;}
+
+*html .right_botbox{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}/***ie6***position:fixed**/
+
+.right_topbg{background:url(../images/fx-images/fxright_topbg.gif) no-repeat top; height:40px; position:relative;}
+.right_topbg .closebtn{ background:url(../images/fx-images/fxright_closebtn.gif) no-repeat; width:32px; height:23px; text-indent:-9999px; display:inline-block;position:absolute; top:1px; right:1px;}
+.right_topbg .closebtn:hover{background:url(../images/fx-images/fxright_closebtnhover.gif) no-repeat;}
+.right_botbox ul{ background:url(../images/fx-images/fxright_midbg.gif) repeat-y top;width:300px;padding-bottom:15px;}
+.right_botbox li{width:270px;height:25px; line-height:25px;margin:0 auto; padding:0 5px;text-align:left;border-bottom:#b3b9bc dashed 1px;}
+.right_botbox li em{float:left;width:15px;}
+.right_botbox li .date{float:left;width:40px; display:inline-block;text-align:right;}
+.right_botbox li a{float:left;width:200px;margin-right:6px; display:inline;text-decoration:none; color:#333; }
+.right_botbox li a:hover{ color:#ed0000;}
+.right_botbg{ background:url(../images/fx-images/fxright_botbg.gif) no-repeat top; height:4px;}
+
+.car-close, .car_fenpeibtn, .btn, .btn_yiwei, .btn_fuwei, .zuoweihao_box s, .zuowei_list a {
+background: url(/images/car_style.gif) no-repeat 0 -9999px;
+}
+.car_fenpeibtn {
+display: inline-block;
+background-position: 0 -48px;
+width: 136px;
+height: 37px;
+margin-top: 2px;
+margin-bottom: 2px;
+}
+.car_fenpeibtn.select{background-position:0 -89px;}
+
+/***yf-7-18***********网页右下角弹出广告标题**/
+.right_topbg .title{ text-align:left; position:absolute; left:10px; top:12px; font-size:12px; color:#000;font-weight:bold;}

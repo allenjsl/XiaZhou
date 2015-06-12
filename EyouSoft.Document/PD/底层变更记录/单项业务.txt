@@ -1,0 +1,1 @@
+﻿2012-2-27 单项业务供应商安排，增加人数列。tbl_Plan 添加字段：PeopleNumber int 0
